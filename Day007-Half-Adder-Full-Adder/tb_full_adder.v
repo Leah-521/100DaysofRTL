@@ -8,37 +8,24 @@ wire sum1;
 wire cout1;
 
 initial begin
-    a1 = 0; #10
-    b1 = 0; #10
-    cin1 = 0; #10
+    $dumpfile("full_adder_wave.vcd");
+    $dumpvars(0, tb_full_adder);
 
-    a1 = 0; #10
-    b1 = 0; #10
-    cin1 = 1; #10
+    a1 = 0;b1 = 0;cin1 = 0; #10 //"0"
 
-    a1 = 0; #10
-    b1 = 1; #10
-    cin1 = 0; #10
+    a1 = 0;b1 = 0;cin1 = 1; #10 //"1"
 
-    a1 = 0; #10
-    b1 = 1; #10
-    cin1 = 1; #10
+    a1 = 0;b1 = 1;cin1 = 0; #10 //"2"
+
+    a1 = 0;b1 = 1;cin1 = 1; #10 //"3"
     
-    a1 = 1; #10
-    b1 = 0; #10
-    cin1 = 0; #10
+    a1 = 1;b1 = 0;cin1 = 0; #10 //"4"
 
-    a1 = 1; #10
-    b1 = 0; #10
-    cin1 = 1; #10
+    a1 = 1;b1 = 0;cin1 = 1; #10 //"5"
     
-    a1 = 1; #10
-    b1 = 1; #10
-    cin1 = 0; #10
+    a1 = 1;b1 = 1;cin1 = 0; #10 //"6"
 
-    a1 = 1; #10
-    b1 = 1; #10
-    cin1 = 1; #10
+    a1 = 1;b1 = 1;cin1 = 1; #10 //"7"
     
     $finish;
 
@@ -53,8 +40,6 @@ full_adder u_full_adder(
     .sum(sum1),
     .cout(cout1)
     );
-
-
 
 
 

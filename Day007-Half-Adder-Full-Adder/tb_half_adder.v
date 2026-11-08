@@ -7,17 +7,16 @@ wire sum1;
 wire carry1;
 
 initial begin
-    a1 = 0; #10
-    b1 = 0; #10
+    $dumpfile("half_adder_wave.vcd");
+    $dumpvars(0, tb_half_adder);
 
-    a1 = 0; #10
-    b1 = 1; #10
+    a1 = 0;b1 = 0; #10
 
-    a1 = 1; #10
-    b1 = 0; #10
+    a1 = 0;b1 = 1; #10
 
-    a1 = 1; #10
-    b1 = 1; #10
+    a1 = 1;b1 = 0; #10
+
+    a1 = 1;b1 = 1; #10
     
     $finish;
 
