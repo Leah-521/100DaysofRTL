@@ -9,7 +9,7 @@ wire carry;
 
 
 initial begin
-    $dumpfile("ha_nand__wave.vcd");  // 指定波形文件名称
+    $dumpfile("ha_nand_wave.vcd");  // 指定波形文件名称
     $dumpvars(0, tb_ha_nand); // 记录波形信号
 
      a=0;b=0;#10

@@ -1,0 +1,50 @@
+$date
+	Tue Nov 10 19:32:03 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_hs_nand $end
+$var wire 1 ! diff $end
+$var wire 1 " borrow $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$scope module u_hs_nand $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 " borrow $end
+$var wire 1 ! diff $end
+$var wire 3 % w [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b111 %
+0$
+0#
+0"
+0!
+$end
+#10000
+1!
+1"
+b11 %
+1$
+#20000
+0"
+b101 %
+0$
+1#
+#30000
+0!
+0"
+b110 %
+1$
+#40000
