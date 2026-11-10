@@ -1,0 +1,84 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5e9222e2a080 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x5e9222e2a210 .scope module, "tb_hs_nand" "tb_hs_nand" 3 3;
+ .timescale -9 -12;
+v0x5e9222e3ed40_0 .var "a", 0 0;
+v0x5e9222e3ee00_0 .var "b", 0 0;
+v0x5e9222e3eed0_0 .net "borrow", 0 0, L_0x5e9222e3f910;  1 drivers
+v0x5e9222e3efd0_0 .net "diff", 0 0, L_0x5e9222e3f660;  1 drivers
+S_0x5e9222def490 .scope module, "u_hs_nand" "hs_nand" 3 25, 4 1 0, S_0x5e9222e2a210;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "diff";
+    .port_info 3 /OUTPUT 1 "borrow";
+L_0x5e9222e3f0a0 .functor NAND 1, v0x5e9222e3ed40_0, v0x5e9222e3ee00_0, C4<1>, C4<1>;
+L_0x5e9222e3f190 .functor NAND 1, v0x5e9222e3ed40_0, L_0x5e9222e3f200, C4<1>, C4<1>;
+L_0x5e9222e3f4b0 .functor NAND 1, v0x5e9222e3ee00_0, L_0x5e9222e3f570, C4<1>, C4<1>;
+L_0x5e9222e3f660 .functor NAND 1, L_0x5e9222e3f750, L_0x5e9222e3f870, C4<1>, C4<1>;
+L_0x5e9222e3f910 .functor NAND 1, L_0x5e9222e3f9d0, L_0x5e9222e3fb00, C4<1>, C4<1>;
+v0x5e9222e2a850_0 .net *"_ivl_0", 0 0, L_0x5e9222e3f0a0;  1 drivers
+v0x5e9222e3e180_0 .net *"_ivl_10", 0 0, L_0x5e9222e3f570;  1 drivers
+v0x5e9222e3e260_0 .net *"_ivl_12", 0 0, L_0x5e9222e3f750;  1 drivers
+v0x5e9222e3e350_0 .net *"_ivl_14", 0 0, L_0x5e9222e3f870;  1 drivers
+v0x5e9222e3e430_0 .net *"_ivl_16", 0 0, L_0x5e9222e3f9d0;  1 drivers
+v0x5e9222e3e560_0 .net *"_ivl_18", 0 0, L_0x5e9222e3fb00;  1 drivers
+v0x5e9222e3e640_0 .net *"_ivl_2", 0 0, L_0x5e9222e3f190;  1 drivers
+v0x5e9222e3e720_0 .net *"_ivl_5", 0 0, L_0x5e9222e3f200;  1 drivers
+v0x5e9222e3e800_0 .net *"_ivl_6", 0 0, L_0x5e9222e3f4b0;  1 drivers
+v0x5e9222e3e8e0_0 .net "a", 0 0, v0x5e9222e3ed40_0;  1 drivers
+v0x5e9222e3e9a0_0 .net "b", 0 0, v0x5e9222e3ee00_0;  1 drivers
+v0x5e9222e3ea60_0 .net "borrow", 0 0, L_0x5e9222e3f910;  alias, 1 drivers
+v0x5e9222e3eb20_0 .net "diff", 0 0, L_0x5e9222e3f660;  alias, 1 drivers
+v0x5e9222e3ebe0_0 .net "w", 2 0, L_0x5e9222e3f2f0;  1 drivers
+L_0x5e9222e3f200 .part L_0x5e9222e3f2f0, 0, 1;
+L_0x5e9222e3f2f0 .concat8 [ 1 1 1 0], L_0x5e9222e3f0a0, L_0x5e9222e3f190, L_0x5e9222e3f4b0;
+L_0x5e9222e3f570 .part L_0x5e9222e3f2f0, 0, 1;
+L_0x5e9222e3f750 .part L_0x5e9222e3f2f0, 1, 1;
+L_0x5e9222e3f870 .part L_0x5e9222e3f2f0, 2, 1;
+L_0x5e9222e3f9d0 .part L_0x5e9222e3f2f0, 2, 1;
+L_0x5e9222e3fb00 .part L_0x5e9222e3f2f0, 2, 1;
+    .scope S_0x5e9222e2a210;
+T_0 ;
+    %vpi_call/w 3 12 "$dumpfile", "hs_nand_wave.vcd" {0 0 0};
+    %vpi_call/w 3 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5e9222e2a210 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e9222e3ed40_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e9222e3ee00_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e9222e3ed40_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e9222e3ee00_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e9222e3ed40_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e9222e3ee00_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e9222e3ed40_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e9222e3ee00_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call/w 3 20 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_hs_nand.v";
+    "hs_nand.v";
