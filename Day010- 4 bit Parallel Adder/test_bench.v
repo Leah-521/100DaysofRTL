@@ -16,6 +16,9 @@ always begin
 end
 
 initial begin
+    $dumpfile("parallel_adder_wave.vcd");  // 指定波形文件名称
+    $dumpvars(0, tb_parallel_adder); // 记录波形信号
+
     $monitor("a= %b b= %b cin= %b sum =%b carry =%b",
               a,b,cin,sum,carry);
     #60
