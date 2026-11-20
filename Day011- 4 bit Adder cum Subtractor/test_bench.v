@@ -16,18 +16,14 @@ initial begin
      clk=0;
 
      $random(a,b,bin);
+     $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
+            $time, a, b, bin, diff, bout);
      #60;
 
 end
 
 always begin
      #5 clk = ~clk;
-end
-
-always begin
-    $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
-            $time, a, b, bin, diff, bout);
-    #10;
 end
 
 add_sub u_add_sub(
