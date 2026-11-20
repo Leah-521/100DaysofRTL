@@ -30,7 +30,7 @@ always begin
     #10;
 end
 
-full_adder u_full_adder(
+add_sub u_add_sub(
        .a(a),
        .b(b),
        .bin(bin),
