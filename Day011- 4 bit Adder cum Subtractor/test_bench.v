@@ -15,38 +15,38 @@ initial begin
      $dumpvars(0, tb_add_sub);
      clk=0;
 
-     a=4'b1010,b=4'b0101;bin=1'b0;
+     a=4'b1010;b=4'b0101;bin=1'b0;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
-     a=4'b1010,b=4'b0101;bin=1'b1;
+     a=4'b1010;b=4'b0101;bin=1'b1;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
 
-     a=4'b1011,b=4'b1101;bin=1'b0;
+     a=4'b1011;b=4'b1101;bin=1'b0;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
-     a=4'b1011,b=4'b1101;bin=1'b1;
+     a=4'b1011;b=4'b1101;bin=1'b1;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
      
-     a=4'b0000,b=4'b1111;bin=1'b0;
+     a=4'b0000;b=4'b1111;bin=1'b0;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
-     a=4'b0000,b=4'b1111;bin=1'b1;
+     a=4'b0000;b=4'b1111;bin=1'b1;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
 
-     a=4'b1100,b=4'b0100;bin=1'b0;
+     a=4'b1100;b=4'b0100;bin=1'b0;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
-     a=4'b1100,b=4'b0100;bin=1'b1;
+     a=4'b1100;b=4'b0100;bin=1'b1;
      $display("Time: %0t | a: %b | b: %b | bin: %b | diff: %b | bout: %b",
             $time, a, b, bin, diff, bout);
      #10
