@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_add_sub();\
+module tb_add_sub();
 
 reg [3:0] a;
 reg [3:0] b;
